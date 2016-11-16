@@ -4,6 +4,6 @@ $user="root";
 $pass="";
 $db="crack";
 
-$kon=mysql_connect($host,$user,$pass) OR DIE ('Koneksi Gagal');
-mysql_select_db($db);
+$kon=mysqli_connect($host,$user,$pass,$db) OR DIE ('Koneksi Gagal');
+
 ?>
