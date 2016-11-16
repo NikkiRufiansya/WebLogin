@@ -7,8 +7,8 @@ include "config.php";
 
 $id_mhs = $_GET['id_mhs'];;
 
-$query = mysql_query("SELECT * FROM mahasiswa WHERE id_mhs = '$id_mhs'");
-while($row = mysql_fetch_array($query)){
+$query = mysqli_query($kon,"SELECT * FROM mahasiswa WHERE id_mhs = '$id_mhs'");
+while($row = mysqli_fetch_array($query)){
 ?>
 	<div align="center">
 			<table style="background-color:#E0C75C;padding:50px;margin-top:150px;">
