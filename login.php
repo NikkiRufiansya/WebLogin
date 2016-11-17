@@ -1,5 +1,5 @@
 <?php
-include "http://sekbelajarbang-sekbelajarbang.44fs.preview.openshiftapps.com/config.php";
+include "config.php";
 
 $email = $_POST['email'];
 $password = md5($_POST['password']);
