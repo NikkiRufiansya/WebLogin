@@ -1,13 +1,8 @@
-<?php
+define('DB_HOST', getenv('OPENSHIFT_MYSQL_DB_HOST'));
+define('DB_PORT', getenv('OPENSHIFT_MYSQL_DB_PORT'));
+define('DB_USER', getenv('OPENSHIFT_MYSQL_DB_USERNAME'));
+define('DB_PASS', getenv('OPENSHIFT_MYSQL_DB_PASSWORD'));
+define('DB_NAME', getenv('OPENSHIFT_APP_NAME'));
 
-// Database Connection Setting
-
-$dbhost = "127.0.0.1"; // Host name 
-$dbport = "3308"; // Host port
-$dbusername = "user"; // Mysql username 
-$dbpassword = "pass"; // Mysql password 
-$db_name = "crack"; // Database name 
-
-$mysqlCon = mysqli_connect($dbhost, $dbusername, $dbpassword, "", $dbport) or die("Error: " . mysqli_error($mysqlCon));
-mysqli_select_db($mysqlCon, $db_name) or die("Error: " . mysqli_error($mysqlCon));
-?>
+$mysqlCon = mysqli_connect(DB_HOST, DB_USER, DB_PASS, "", DB_PORT) or die("Error: " . mysqli_error($mysqlCon));
+mysqli_select_db($mysqlCon, DB_NAME) or die("Error: " . mysqli_error($mysqlCon));
